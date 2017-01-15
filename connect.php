@@ -2,9 +2,7 @@
 
 require_once 'helpers/meekrodb.2.3.class.php';
 
-$prod = true;
-
-if (!$prod)
+if (!(getenv("DATABASE_URL")))
 {
     DB::$host = 'localhost';
     DB::$user = 'marspace';
