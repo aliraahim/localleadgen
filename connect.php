@@ -11,7 +11,7 @@ if (!$prod)
     DB::$password = '';
     DB::$dbName = 'LocalLeadGen';  
 } else {
-    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    $url = parse_url(getenv("DATABASE_URL"));
     DB::$host = $url["host"];
     DB::$user = $url["user"];
     DB::$password = $url["pass"];
