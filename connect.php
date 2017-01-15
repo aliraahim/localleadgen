@@ -2,7 +2,7 @@
 
 require_once 'helpers/meekrodb.2.3.class.php';
 
-$prod = false;
+$prod = true;
 
 if (!$prod)
 {
