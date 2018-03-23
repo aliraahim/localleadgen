@@ -16,12 +16,20 @@ class ComposerStaticInitab89787709c5e1bc9201fb12b59b0209
         array (
             'SendGrid\\' => 9,
         ),
+        'P' => 
+        array (
+            'PhpAmqpLib\\' => 11,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'SendGrid\\' => 
         array (
             0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
+        ),
+        'PhpAmqpLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-amqplib/php-amqplib/PhpAmqpLib',
         ),
     );
 

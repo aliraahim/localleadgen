@@ -43,9 +43,10 @@ MakeCSV ($data, $path);
 
     echo 'All done! Please check "' . $path . '" for the output file';
   
-} else {
+} else {   
   echo 'Nothing to work on';
 }
+
 
 
 ?>

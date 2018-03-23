@@ -1,2 +1,2 @@
 web: heroku-php-apache2
-worker: php runjob.php
+worker: php worker.php

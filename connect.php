@@ -16,5 +16,22 @@ if (!(getenv("DATABASE_URL")))
     DB::$dbName = substr($url["path"], 1);
 }
 
+if (!(getenv("RABBITMQ_BIGWIG_URL")))
+{
+    $rabbithost = 'localhost';
+    $rabbitusername = 'guest';
+    $rabbitpassword = 'guest';
+    $rabbitport = 5672;  
+} else {
+    $rabbitmq = parse_url(getenv('RABBITMQ_BIGWIG_URL'));
+    $rabbithost = $rabbitmq['host'];
+    $rabbitport = isset($rabbitmq['port']) ? $rabbitmq['port'] : 5672;
+    $rabbitusername = $rabbitmq['user'];
+    $rabbitpassword = $rabbitmq['pass'];
+    $rabbitvhost = substr($rabbitmq['path'], 1) ?: '/';
+}
+
+
+
 
 ?>
