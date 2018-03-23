@@ -8,7 +8,7 @@ include 'sendemail.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
 
-$connection = new AMQPStreamConnection($rabbithost, $rabbitport, $rabbitusername, $rabbitpassword);
+$connection = new AMQPStreamConnection($rabbithost, $rabbitport, $rabbitusername, $rabbitpassword, $rabbitvhost);
 $channel = $connection->channel();
 
 $channel->queue_declare('hello', false, false, false, false);
