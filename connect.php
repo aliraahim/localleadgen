@@ -22,6 +22,7 @@ if (!(getenv("RABBITMQ_BIGWIG_URL")))
     $rabbitusername = 'guest';
     $rabbitpassword = 'guest';
     $rabbitport = 5672;  
+    $rabbitvhost = '/';
 } else {
     $rabbitmq = parse_url(getenv('RABBITMQ_BIGWIG_URL'));
     $rabbithost = $rabbitmq['host'];
