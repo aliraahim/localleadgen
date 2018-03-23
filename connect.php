@@ -5,8 +5,8 @@ require_once 'helpers/meekrodb.2.3.class.php';
 if (!(getenv("DATABASE_URL")))
 {
     DB::$host = 'localhost';
-    DB::$user = 'marspace';
-    DB::$password = '';
+    DB::$user = 'root';
+    DB::$password = 'confidential';
     DB::$dbName = 'LocalLeadGen';  
 } else {
     $url = parse_url(getenv("DATABASE_URL"));

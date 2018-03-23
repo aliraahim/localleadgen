@@ -27,7 +27,9 @@ include 'categories.php';
         <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-duallistbox.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.css">
         <link href="resources/css/jquery.steps.css" rel="stylesheet">
-        <link href="resources/css/custom.css" rel="stylesheet">
+        <link href="resources/css/custom.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="resources/js/ie-emulation-modes-warning.js"></script>
@@ -89,8 +91,31 @@ include 'categories.php';
                         </div>
                     </div>
                 </div>
-                <h1>Enter details</h1>
-                <div>Enter details here</div>
+                <h1>Enter Your Details</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6"><form id = "userData">
+  <div class="form-group">
+    <label for="name">Your name</label></label>
+    <input type="text" class="form-control" id="name" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="Results will be sent to this address">
+  </div>
+  <div class="form-group">
+    <label for="company">Company</label>
+    <input type="text" class="form-control" id="company" placeholder="">
+  </div>
+  <div class="stylish-checkbox">
+      <input type="checkbox" id="want-emails">
+      <label for="want-emails"><span class="checkbox">I want emails too.</span></label>
+</div>
+</form></div>
+        <div class="col-sm-6"></div>
+    </div>
+</div>
+                </div>
             </div>
         </div>
         <!-- /.container -->
@@ -103,7 +128,7 @@ include 'categories.php';
         </script>
         <script src="resources/js/bootstrap.min.js"></script>
         <script src="resources/js/jquery.steps.js"></script>
-        <script src="resources/js/wizard.js"></script>
+        <script src="resources/js/wizard.js?version=<?php echo uniqid(); ?>"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.3.0/bootstrap-slider.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -111,7 +136,9 @@ include 'categories.php';
         <script src="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.js"></script>
         <script src="resources/js/map.js"></script>
         <script src="resources/js/main.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKg7ZQ_pf7KNyXiP5o-08HaQoaGPg080I&libraries=places&callback=initMap" async defer></script>
+<!--        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKg7ZQ_pf7KNyXiP5o-08HaQoaGPg080I&libraries=places&callback=initMap" async defer></script>-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcdfvmnR3Rtkay5ee7dTm6wXaSfg1U8Ew&libraries=places&callback=initMap" async defer></script>
+
         <script src="resources/js/jquery.bootstrap-duallistbox.min.js"></script>
         <script>
             $("#category-selector").bootstrapDualListbox({

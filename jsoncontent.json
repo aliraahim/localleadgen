@@ -1,0 +1,134 @@
+{
+    "art_gallery": [
+        {
+            "Name": "Cisneros Fontanals Art Foundation",
+            "Categories": [
+                "art_gallery",
+                "point_of_interest",
+                "establishment"
+            ],
+            "Google Rating": 4.5,
+            "Price Level": "",
+            "User Rating": "",
+            "Address": "1018 N Miami Ave, Miami, FL 33136, USA",
+            "Phone Number": "(305) 455-3333",
+            "UTC Offset": -240,
+            "Website": "http:\/\/www.cifo.org\/",
+            "Google Place ID": "ChIJH7vEbPjH2YgRi_2PSuXmTpM"
+        },
+        {
+            "Name": "Downtown Art House",
+            "Categories": [
+                "art_gallery",
+                "point_of_interest",
+                "establishment"
+            ],
+            "Google Rating": "",
+            "Price Level": "",
+            "User Rating": "",
+            "Address": "100 NE 11th St, Miami, FL 33132, USA",
+            "Phone Number": "(305) 374-7376",
+            "UTC Offset": -240,
+            "Website": "https:\/\/turnbasedpress.com\/",
+            "Google Place ID": "ChIJD2VhaaG22YgRJFCm3Xzgbo4"
+        },
+        {
+            "Name": "Art Africa Miami Arts Fair",
+            "Categories": [
+                "art_gallery",
+                "point_of_interest",
+                "establishment"
+            ],
+            "Google Rating": 5,
+            "Price Level": "",
+            "User Rating": "",
+            "Address": "920 NW 2nd Ave, Miami, FL 33136, USA",
+            "Phone Number": "",
+            "UTC Offset": -240,
+            "Website": "http:\/\/artafricamiamifair.com\/",
+            "Google Place ID": "ChIJAYfw0aK22YgRUhy1R9dbIww"
+        }
+    ],
+    "school": [
+        {
+            "Name": "Greater Bethel Head Start",
+            "Categories": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "Google Rating": "",
+            "Price Level": "",
+            "User Rating": "",
+            "Address": "Miami, FL 33136, USA",
+            "Phone Number": "",
+            "UTC Offset": -240,
+            "Website": "",
+            "Google Place ID": "ChIJN6C5sqK22YgRHaPDT_PNUhg"
+        },
+        {
+            "Name": "Dade County Passenger Transportation",
+            "Categories": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "Google Rating": 5,
+            "Price Level": "",
+            "User Rating": "",
+            "Address": "601 NW 1st Ct, Miami, FL 33136, USA",
+            "Phone Number": "(786) 469-2300",
+            "UTC Offset": -240,
+            "Website": "http:\/\/www.miamidade.gov\/business\/transportation-complaints.asp",
+            "Google Place ID": "ChIJQ38Lepi22YgRaUBEFEYfCZI"
+        },
+        {
+            "Name": "San Juan High School",
+            "Categories": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "Google Rating": "",
+            "Price Level": "",
+            "User Rating": "",
+            "Address": "800 N Miami Ave, Miami, FL 33136, USA",
+            "Phone Number": "(787) 268-2999",
+            "UTC Offset": -240,
+            "Website": "http:\/\/sanjuanschoolpr.com\/index.php\/contactanos",
+            "Google Place ID": "ChIJl9cPPqK22YgRa7nxCSz8YDY"
+        },
+        {
+            "Name": "Our Lady of Fatima Nursery School",
+            "Categories": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "Google Rating": "",
+            "Price Level": "",
+            "User Rating": "",
+            "Address": "Miami, FL 33136, USA",
+            "Phone Number": "",
+            "UTC Offset": -240,
+            "Website": "",
+            "Google Place ID": "ChIJ9wCwJ7222YgRLwwfxgsc4YA"
+        },
+        {
+            "Name": "Chelsea International Education LLC",
+            "Categories": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "Google Rating": "",
+            "Price Level": "",
+            "User Rating": "",
+            "Address": "990 Biscayne Blvd Office 503, Miami, FL 33132, USA",
+            "Phone Number": "(855) 847-8881",
+            "UTC Offset": -240,
+            "Website": "http:\/\/chelseainternationaleducation.com\/",
+            "Google Place ID": "ChIJ5R5P_qC22YgRUmrE9Jsvi6w"
+        }
+    ]
+}
