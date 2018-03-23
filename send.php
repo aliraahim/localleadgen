@@ -5,7 +5,10 @@ include 'connect.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
-
+echo $rabbithost ."\n";
+echo $rabbitport ."\n";
+echo $rabbitusername ."\n";
+echo $rabbitpassword ."\n";
 $connection = new AMQPStreamConnection($rabbithost, $rabbitport, $rabbitusername, $rabbitpassword);
 $channel = $connection->channel();
 
