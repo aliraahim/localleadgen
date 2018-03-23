@@ -5,6 +5,7 @@ include 'connect.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
+echo $rabbitvhost ."\n";
 echo $rabbithost ."\n";
 echo $rabbitport ."\n";
 echo $rabbitusername ."\n";
