@@ -35,7 +35,7 @@ $want_emails = $request['want_emails'];
 $data = GetNearbyBusinesses($categories, $radius, $lat, $lng, $want_emails);
 //echo $data;
 MakeCSV ($data, $path);
-SendEmail ($user);
+//SendEmail ($user);
 
  DB::update('requests', array(
    'status' => 'completed'
