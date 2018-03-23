@@ -10,7 +10,8 @@ echo $rabbithost ."\n";
 echo $rabbitport ."\n";
 echo $rabbitusername ."\n";
 echo $rabbitpassword ."\n";
-$connection = new AMQPStreamConnection($rabbithost, $rabbitport, $rabbitusername, $rabbitpassword);
+$host = $rabbithost . '/' . $rabbitvhost;
+$connection = new AMQPStreamConnection($host, $rabbitport, $rabbitusername, $rabbitpassword);
 $channel = $connection->channel();
 
 $channel->queue_declare('jobs', false, false, false, false);
