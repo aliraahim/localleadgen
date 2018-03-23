@@ -5,13 +5,13 @@ include 'connect.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
-echo $rabbitvhost ."\n";
+
 echo $rabbithost ."\n";
 echo $rabbitport ."\n";
 echo $rabbitusername ."\n";
 echo $rabbitpassword ."\n";
-$host = $rabbithost . '/' . $rabbitvhost;
-$connection = new AMQPStreamConnection($host, $rabbitport, $rabbitusername, $rabbitpassword);
+echo $rabbitvhost ."\n";
+$connection = new AMQPStreamConnection($rabbithost, $rabbitport, $rabbitusername, $rabbitpassword, $rabbitvhost);
 $channel = $connection->channel();
 
 $channel->queue_declare('jobs', false, false, false, false);
