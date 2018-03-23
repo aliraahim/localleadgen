@@ -1,8 +1,11 @@
 <?php
 header('Content-type: application/json');
+require 'vendor/autoload.php';
 require_once 'helpers/meekrodb.2.3.class.php';
 include 'connect.php';
 include 'radarsearch.php';
+use PhpAmqpLib\Connection\AMQPStreamConnection;
+use PhpAmqpLib\Message\AMQPMessage;
 
 
 if ($_POST['units'] == 'kilometers') 
@@ -67,6 +70,21 @@ $responseArray['status'] = true;
 //if (!$wantEmails){
 //    $responseArray['results'] = GetNearbyBusinesses($categories, $radius, $lat, $lng, $want_emails);
 //}
+
+//queue job
+$connection = new AMQPStreamConnection($rabbithost, $rabbitport, $rabbitusername, $rabbitpassword, $rabbitvhost);
+$channel = $connection->channel();
+
+$channel->queue_declare('jobs', false, false, false, false);
+
+$msg = new AMQPMessage('Hello World!');
+$channel->basic_publish($msg, '', 'jobs');
+
+echo "Notified worker\n";
+
+$channel->close();
+$connection->close();
+//queue job
 
 echo json_encode($responseArray);
 
