@@ -31,7 +31,6 @@ function SendEmail ($user){
     //$apiKey = getenv('SENDGRID_API_KEY');
     $sg = new \SendGrid($apiKey);
     $response = $sg->client->mail()->send()->post($mail);
-    return true;
 //    echo $response->statusCode();
 //    print_r($response->headers());
 //    echo $response->body();
