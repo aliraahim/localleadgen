@@ -44,13 +44,17 @@ $links[] = $completeUrl; //start with original link only
     
 
 if ($searchAll){ //if all the links on the page need to be checked for emails
-    echo 'Deep email scraping...';
+    echo "Deep email scraping...\n";
     $html = @file_get_html($completeUrl);
     if (!is_bool($html)) {
+        echo "Content returned...\n";
         foreach ($html->find('a') as $link) {
+            echo "Link found...\n";
             $checkLink = $link->href;
             if (!stripos($checkLink, 'facebook')){
+                echo "Doesn't belong to FB...\n";
                 if (stripos($checkLink, $url)){ //confirm that the link is on the same domain as the original URL
+                    echo "Added to array...\n";
                     $temp = explode('#',$checkLink); //remove deep linking parts from the link
                     $checkLink = rtrim($temp[0], '/'); //remove / at the end
                     $links[] = $checkLink; //add link to array
