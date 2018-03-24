@@ -42,6 +42,16 @@ if (!(getenv("EMAIL_SENDING"))){
         $send_email = true;
 }
 
+if (!(getenv("DEEP_EMAIL_SCRAPING"))){
+    $deep_email_scrape = false;
+    
+} else {
+    if (getenv("DEEP_EMAIL_SCRAPING")=='0')
+        $deep_email_scrape = false;
+    else
+        $deep_email_scrape = true;
+}
+
 $sendgrid_key = getenv("SENDGRID_API_KEY");
 $google_key = getenv("GOOGLE_API_KEY");
 

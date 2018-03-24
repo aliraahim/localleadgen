@@ -48,16 +48,20 @@ if ($searchAll){ //if all the links on the page need to be checked for emails
     if (!is_bool($html)) {
         foreach ($html->find('a') as $link) {
             $checkLink = $link->href;
-            if (stripos($checkLink, $url)){ //confirm that the link is on the same domain as the original URL
-                $temp = explode('#',$checkLink); //remove deep linking parts from the link
-                $checkLink = rtrim($temp[0], '/'); //remove / at the end
-                $links[] = $checkLink; //add link to array
+            if (!stripos($checkLink, 'facebook')){
+                if (stripos($checkLink, $url)){ //confirm that the link is on the same domain as the original URL
+                    $temp = explode('#',$checkLink); //remove deep linking parts from the link
+                    $checkLink = rtrim($temp[0], '/'); //remove / at the end
+                    $links[] = $checkLink; //add link to array
             }
+            }
+
         }
     }
 }
 
 $links = array_unique($links); //remove duplicate links
+var_dump($links);
 $emailList = []; //will contain all emails that are found to check for duplicates during parsing
 $emails = array();
 

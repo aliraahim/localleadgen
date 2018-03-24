@@ -59,12 +59,17 @@ foreach($categories as $category)
          
          if ($want_emails){
              if( isset( $details->result->website ) ) {
-                 $emailData = json_decode(getEmails($details->result->website, false));
+                 $emailData = json_decode(getEmails($details->result->website, $GLOBALS['deep_email_scrape'], true));
                  //$emailData = json_decode(getEmails("http://business.referrizer.com", false)); //for testing only
-                 $emails = $emailData->emails;
-                 foreach($emails as $emailKey=>$email){
-                     $nearbyPlaces[$category][$key]['Emails'][$emailKey] = $emails[$emailKey]->Email;
+                 if ($emailData->total_emails > 0){
+                     $emails = $emailData->emails;
+                     foreach($emails as $emailKey=>$email){
+                         $nearbyPlaces[$category][$key]['Emails'][$emailKey] = $emails[$emailKey]->Email;
+                     }
+                 } else {
+                     $nearbyPlaces[$category][$key]['Emails'] = "";
                  }
+                 
              }
              else
                 $nearbyPlaces[$category][$key]['Emails'] = "";
