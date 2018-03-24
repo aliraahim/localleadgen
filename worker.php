@@ -19,8 +19,8 @@ echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
 $callback = function($msg) {
     try {
         echo "Starting work...\n";
-        $request = DB::queryFirstRow("SELECT * FROM requests WHERE status=%s", 'pending');
-        $user = DB::queryFirstRow("SELECT * FROM users WHERE request_id=%s", $request['id']);
+        $request = @DB::queryFirstRow("SELECT * FROM requests WHERE status=%s", 'pending');
+        $user = @DB::queryFirstRow("SELECT * FROM users WHERE request_id=%s", $request['id']);
 
         if ($request != NULL){
 

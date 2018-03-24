@@ -8,8 +8,8 @@ include 'sendemail.php';
 
 //Load Composer's autoloader
 
-$request = DB::queryFirstRow("SELECT * FROM requests WHERE status=%s", 'pending');
-$user = DB::queryFirstRow("SELECT * FROM users WHERE request_id=%s", $request['id']);
+$request = @DB::queryFirstRow("SELECT * FROM requests WHERE status=%s", 'pending');
+$user = @DB::queryFirstRow("SELECT * FROM users WHERE request_id=%s", $request['id']);
 
 if ($request != NULL){
     
