@@ -58,21 +58,21 @@ $("#wizard").steps({
     }
     , onStepChanging: function (event, currentIndex, newIndex) {
         if (newIndex == 2) {
-            if ($('#category-selector').val().length > 5) {
-                swal({
-                    text: "You can only select a maximum of 5 categories."
-                    , type: "warning"
-                    , confirmButtonClass: "btn-warning"
-                    , confirmButtonText: "Ok, I'll de-select some."
-                , });
-                return;
-            }
             if ($('#category-selector').val() == null) {
                 swal({
                     text: "Please select at least one place type."
                     , type: "warning"
                     , confirmButtonClass: "btn-warning"
                     , confirmButtonText: "Ok, take me back."
+                , });
+                return;
+            }
+            if ($('#category-selector').val().length > 5) {
+                swal({
+                    text: "You can only select a maximum of 5 categories."
+                    , type: "warning"
+                    , confirmButtonClass: "btn-warning"
+                    , confirmButtonText: "Ok, I'll de-select some."
                 , });
                 return;
             }
