@@ -131,3 +131,7 @@ input[type="checkbox"]:checked + label span.checkbox::after {
 #wizard{
     margin-bottom: 5em;
 }
+
+.wizard > .steps > ul > li {
+    width:33%;
+}

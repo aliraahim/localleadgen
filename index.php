@@ -98,11 +98,11 @@ include 'connect.php';
         <div class="col-sm-6"><form id = "userData">
   <div class="form-group">
     <label for="name">Your name</label></label>
-    <input type="text" class="form-control" id="name" placeholder="">
+    <input type="text" class="form-control" id="name" placeholder="" required>
   </div>
   <div class="form-group">
     <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" placeholder="Results will be sent to this address">
+    <input type="email" class="form-control" id="email" placeholder="Results will be sent to this address" required>
   </div>
   <div class="form-group">
     <label for="company">Company</label>
