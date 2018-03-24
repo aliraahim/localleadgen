@@ -14,13 +14,16 @@ $channel = $connection->channel();
 $channel->queue_declare('jobs', false, false, false, false);
 
 echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
-
+DB::$nonsql_error_handler = false; // since we're catching errors, don't need error handler
+DB::$throw_exception_on_nonsql_error = true;
+DB::$error_handler = false; // since we're catching errors, don't need error handler
+DB::$throw_exception_on_error = true;
 
 $callback = function($msg) {
     try {
         echo "Starting work...\n";
-        $request = @DB::queryFirstRow("SELECT * FROM requests WHERE status=%s", 'pending');
-        $user = @DB::queryFirstRow("SELECT * FROM users WHERE request_id=%s", $request['id']);
+        $request = DB::queryFirstRow("SELECT * FROM requests WHERE status=%s", 'pending');
+        $user = DB::queryFirstRow("SELECT * FROM users WHERE request_id=%s", $request['id']);
 
         if ($request != NULL){
 
@@ -62,7 +65,7 @@ $callback = function($msg) {
           echo "Nothing to work on\n";
         }
     }
-    catch (Exception $e) {
+    catch (MeekroDBException $e) {
         echo 'Worker had to exit because: ' .$e->getMessage();
     }
 };
