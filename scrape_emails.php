@@ -45,7 +45,7 @@ $links[] = $completeUrl; //start with original link only
 
 if ($searchAll){ //if all the links on the page need to be checked for emails
     echo "Deep email scraping...\n";
-    $html = @file_get_html($completeUrl);
+    $html = file_get_html($completeUrl);
     if (!is_bool($html)) {
         echo "Content returned...\n";
         foreach ($html->find('a') as $link) {
