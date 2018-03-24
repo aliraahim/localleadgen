@@ -1,5 +1,6 @@
 <?php 
 include_once('scrape_emails.php');
+include('connect.php');
 
 function GetNearbyBusinesses ($categories, $radius, $lat, $lng, $want_emails)
 {
@@ -81,7 +82,7 @@ return json_encode($nearbyPlaces, 128);
 }
 
 function RadarSearch ($coordinates, $category, $radius) {
-    $key = "AIzaSyBcdfvmnR3Rtkay5ee7dTm6wXaSfg1U8Ew";
+    $key = $GLOBALS['google_key'];
     $url = "https://maps.googleapis.com/maps/api/place/radarsearch/json";
     $param= "?location=".$coordinates."&radius=".$radius."&types=".$category."&key=".$key;
     $response = makeCurl($url,$param);
@@ -89,7 +90,7 @@ function RadarSearch ($coordinates, $category, $radius) {
 }
 
 function PlaceDetails ($place_id) {
-    $key = "AIzaSyBcdfvmnR3Rtkay5ee7dTm6wXaSfg1U8Ew";
+    $key = $GLOBALS['google_key'];
     $url = "https://maps.googleapis.com/maps/api/place/details/json";
     $param= "?placeid=".$place_id."&key=".$key;
     $response = makeCurl($url,$param);

@@ -10,10 +10,13 @@ $channel = $connection->channel();
 
 $channel->queue_declare('jobs', false, false, false, false);
 
-$msg = new AMQPMessage('Hello World!');
+date_default_timezone_set("Asia/Karachi");
+$date = date("D M d, Y G:i");
+
+$msg = new AMQPMessage($date);
 $channel->basic_publish($msg, '', 'jobs');
 
-echo "Notified worker\n";
+echo "Notified worker on ".$date."\n";
 
 $channel->close();
 $connection->close();

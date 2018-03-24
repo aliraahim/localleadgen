@@ -1,5 +1,6 @@
 <?php
 include 'categories.php';
+include 'connect.php';
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -136,8 +137,7 @@ include 'categories.php';
         <script src="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.js"></script>
         <script src="resources/js/map.js"></script>
         <script src="resources/js/main.js"></script>
-<!--        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKg7ZQ_pf7KNyXiP5o-08HaQoaGPg080I&libraries=places&callback=initMap" async defer></script>-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcdfvmnR3Rtkay5ee7dTm6wXaSfg1U8Ew&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $GLOBALS['google_key'] ?>&libraries=places&callback=initMap" async defer></script>
 
         <script src="resources/js/jquery.bootstrap-duallistbox.min.js"></script>
         <script>

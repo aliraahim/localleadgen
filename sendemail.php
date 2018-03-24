@@ -7,7 +7,7 @@
 // require("path/to/sendgrid-php/sendgrid-php.php");
 
 function SendEmail ($user){
-    $apiKey = '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';
+    $apiKey = $GLOBALS['sendgrid_key'];
     $from = new SendGrid\Email("HyperLocal Lead Gen", "delivery@hyperlocalleadgen.com");
     $subject = "Your leads are here!";
     $to = new SendGrid\Email($user['name'], $user['email']);

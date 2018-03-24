@@ -32,7 +32,17 @@ if (!(getenv("RABBITMQ_BIGWIG_URL")))
     $rabbitvhost = substr($rabbitmq['path'], 1) ?: '/';
 }
 
+if (!(getenv("EMAIL_SENDING"))){
+    $send_email = false;
+    
+} else {
+    if (getenv("EMAIL_SENDING")=='0')
+        $send_email = false;
+    else
+        $send_email = true;
+}
 
-
+$sendgrid_key = getenv("SENDGRID_API_KEY");
+$google_key = getenv("GOOGLE_API_KEY");
 
 ?>

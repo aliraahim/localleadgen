@@ -33,7 +33,7 @@ $want_emails = $request['want_emails'];
 //$want_emails = 0; //test mode
 
 $data = GetNearbyBusinesses($categories, $radius, $lat, $lng, $want_emails);
-//echo $data;
+echo $data;
 MakeCSV ($data, $path);
 //SendEmail ($user);
 

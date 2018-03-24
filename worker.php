@@ -25,33 +25,39 @@ $callback = function($msg) {
 
         $path = "output/" . $request['id'] . ".csv";
 
-     DB::update('requests', array(
-       'status' => 'started'
-       ), "id=%d", $request['id']);
+         DB::update('requests', array(
+           'status' => 'started'
+           ), "id=%d", $request['id']);
 
-    $categories = '["gym"]';
-    $radius = "1500";
-    $lat = "25.07406229";
-    $lng = "55.19377312";
-    $want_emails = "0";
+        $categories = '["gym"]';
+        $radius = "1500";
+        $lat = "25.07406229";
+        $lng = "55.19377312";
+        $want_emails = "0";
 
-    $categories = $request['categories'];
-    $radius = $request['radius'];
-    $lat = $request['lat'];
-    $lng = $request['lng'];
-    $want_emails = $request['want_emails'];
-    //$want_emails = 0; //test mode
+        $categories = $request['categories'];
+        $radius = $request['radius'];
+        $lat = $request['lat'];
+        $lng = $request['lng'];
+        $want_emails = $request['want_emails'];
+        //$want_emails = 0; //test mode
 
-    $data = GetNearbyBusinesses($categories, $radius, $lat, $lng, $want_emails);
-    //echo $data;
-    MakeCSV ($data, $path);
-    SendEmail ($user);
+        $data = GetNearbyBusinesses($categories, $radius, $lat, $lng, $want_emails);
+        echo $data;
+        MakeCSV ($data, $path);
+        
+        if ($GLOBALS['send_email']){
+            SendEmail ($user);
+        }
+        DB::update('requests', array(
+           'status' => 'completed'
+           ), "id=%d", $request['id']); 
 
-     DB::update('requests', array(
-       'status' => 'completed'
-       ), "id=%d", $request['id']); 
-
-        echo "All done! Please check '" . $path . "' for the output file\n";
+        //echo "All done! Please check '" . $path . "' for the output file\n";
+        if ($GLOBALS['send_email'])
+            echo "All done! Email sent to " . $user['email'] . ".";
+        else
+            echo "All done! No email sent.";
 
     } else {   
       echo "Nothing to work on\n";
