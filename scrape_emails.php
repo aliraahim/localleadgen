@@ -45,7 +45,9 @@ $links[] = $completeUrl; //start with original link only
 
 if ($searchAll){ //if all the links on the page need to be checked for emails
     echo "Deep email scraping...\n";
-    $html = file_get_html($completeUrl);
+    $html = getHTML($completeUrl);
+    //$html = file_get_html($completeUrl);
+    //var_dump($html);
     if (!is_bool($html)) {
         echo "Content returned...\n";
         foreach ($html->find('a') as $link) {
@@ -73,8 +75,9 @@ $emails = array();
 
 $emailCount = 0;
 foreach ($links as $link){  
-    $html = @file_get_html($link);
-
+    
+    $html = getHTML($link);
+    //$html = file_get_html($link);
     $pattern = '/[a-z0-9_\-\+]+@[a-z0-9\-]+\.([a-z]{2,3})(?:\.[a-z]{2})?/i';
 
     // preg_match_all returns an associative array
@@ -114,6 +117,18 @@ function passesHygiene($email, $hygieneWords, $hygiene)
         }
     }
     return true;
+}
+
+function getHTML ($link){
+    $ch = curl_init($link);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
+//    $content = curl_exec($ch);
+    $dom = new simple_html_dom();
+    // Load HTML from a string
+    $dom->load(curl_exec($ch));
+    curl_close($ch);
+    return $dom;
 }
 
 ?>
