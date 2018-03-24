@@ -43,7 +43,6 @@ $callback = function($msg) {
         //$want_emails = 0; //test mode
 
         $data = GetNearbyBusinesses($categories, $radius, $lat, $lng, $want_emails);
-        echo $data;
         MakeCSV ($data, $path);
         
         if ($GLOBALS['send_email']){
@@ -55,10 +54,9 @@ $callback = function($msg) {
 
         //echo "All done! Please check '" . $path . "' for the output file\n";
         if ($GLOBALS['send_email'])
-            echo "All done! Email sent to " . $user['email'] . ".";
+            echo "All done! Email sent to " . $user['email'] . " for request ID: " . $request['id'] . ".\n";
         else
-            echo "All done! No email sent.";
-
+            echo "All done! No email sent" . " for request ID: " . $request['id'] . ".\n";
     } else {   
       echo "Nothing to work on\n";
     }
