@@ -12,8 +12,14 @@ include 'connect.php';
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="../../favicon.ico">
-        <title>LocalLeadGen</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="theme-color" content="#ffffff">
+        <title>HyperLocal Lead Gen</title>
         <meta charset="utf-8">
         <!-- Bootstrap core CSS -->
         <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -45,20 +51,21 @@ include 'connect.php';
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">LocalLeadGen</a> </div>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">HyperLocal Lead Gen</a> </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="#">Application</a></li>
+                        <li><a href="#">About</a></li>
                     </ul>
                 </div>
-                <!--/.nav-collapse -->
             </div>
         </nav>
-        <div class="container">
+        <!-- <div class="container">
             <div class="starter-template">
                 <h1>Local Leads Generator</h1> </div>
-        </div>
+        </div> -->
         <div class="container">
+        <div class="starter-template">
             <div id="wizard">
                 <h1>Select Search Area</h1>
                 <div>
@@ -117,7 +124,13 @@ include 'connect.php';
     </div>
 </div>
                 </div>
+                
+                </div>
+                <div><p class ="text-center">Built by Raahim.</p></div>
+                
             </div>
+
+
         </div>
         <!-- /.container -->
         <!-- Bootstrap core JavaScript
