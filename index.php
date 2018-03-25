@@ -30,11 +30,11 @@ include 'connect.php';
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
         <link href="resources/css/jquery.steps-main.css" rel="stylesheet">
         <link href="resources/css/jquery.steps-normalize.css" rel="stylesheet">
-        <link href="resources/css/main.css" rel="stylesheet">
+        <link href="resources/css/main.css?version=2" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-duallistbox.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.css">
         <link href="resources/css/jquery.steps.css" rel="stylesheet">
-        <link href="resources/css/custom.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
+        <link href="resources/css/custom.css?version=2" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
