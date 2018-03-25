@@ -43,11 +43,14 @@ $("#wizard").steps({
                 } else {
                     swal({
                     title: "Woohooo!"
-                    , text: "Your results are on their way."
+                    , text: "Your results are on their way. You will receive an email very soon!"
                     , type: "success"
                     , confirmButtonClass: "btn-success"
                     , confirmButtonText: "Nice!"
-                 });
+                 }).then(function() {
+                    // Redirect the user
+                    window.location.href = "/";
+                    });
                 }
                 
             }
@@ -58,13 +61,14 @@ $("#wizard").steps({
     }
     , onStepChanging: function (event, currentIndex, newIndex) {
         if (newIndex == 2) {
+            
             if ($('#category-selector').val() == null) {
                 swal({
                     text: "Please select at least one place type."
                     , type: "warning"
                     , confirmButtonClass: "btn-warning"
                     , confirmButtonText: "Ok, take me back."
-                , });
+                });
                 return;
             }
             if ($('#category-selector').val().length > 5) {
