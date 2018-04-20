@@ -36,7 +36,8 @@ include 'connect.php';
         <link href="resources/css/jquery.steps.css" rel="stylesheet">
         <link href="resources/css/custom.css?version=2" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="resources/js/ie-emulation-modes-warning.js"></script>
@@ -45,10 +46,11 @@ include 'connect.php';
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">HyperLocal Lead Gen</a> </div>
@@ -59,18 +61,18 @@ include 'connect.php';
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <!-- <div class="container">
             <div class="starter-template">
                 <h1>Local Leads Generator</h1> </div>
         </div> -->
         <div class="container">
-        <div class="starter-template">
+        <div class="">
             <div id="wizard">
-                <h1>Select Search Area</h1>
+                <h1><span class ="step-icon"><i class="fas fa-map-marker-alt"></i></span><span class ="step-number">Step 1</span><br/><span class ="step-title">Select Area</span></h1>
                 <div>
                     <div>
-                        <p class="lead">Select your target area by placing a marker on the map and selecting the search radius.</p>
+                        <p class="lead">Select your target area by placing a marker on the map and selecting the search radius below the map.</p>
                     </div>
                     <div style="height:70%; text-align:center;">
                         <input id="pac-input" class="controls" type="text" placeholder="Enter the location that you're interested in">
@@ -86,10 +88,10 @@ include 'connect.php';
         </span> </div>
                     </div>
                 </div>
-                <h1>Select Place Types</h1>
+                <h1><span class ="step-icon"><i class="fas fa-building"></i></span><span class ="step-number">Step 2</span><br/><span class ="step-title">Select Types</span></h1>
                 <div>
                     <div>
-                        <p class="lead">Select the place types that you want to search for.</p>
+                        <p class="lead">Select the types of places/businesses that you want to search for.</p>
                         <div class="row">
                             <div class="col-sm-12">
                                 <select id="category-selector" multiple="multiple" size="10">
@@ -99,7 +101,7 @@ include 'connect.php';
                         </div>
                     </div>
                 </div>
-                <h1>Enter Your Details</h1>
+                <h1><span class ="step-icon"><i class="fab fa-wpforms"></i></span><span class ="step-number">Step 3</span><br/><span class ="step-title">Enter Details</span></h1>
 <div class="container">
     <div class="row">
         <div class="col-sm-6"><form id = "userData">
@@ -128,6 +130,7 @@ include 'connect.php';
                 </div>
                 <div><p class ="text-center">Built by Raahim.</p></div>
                 
+                
             </div>
 
 
@@ -136,6 +139,7 @@ include 'connect.php';
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
             window.jQuery || document.write('<script src="resources/js/vendor/jquery.min.js"><\/script>')

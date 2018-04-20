@@ -24,9 +24,9 @@
     -webkit-box-shadow: none !important;
 }
 
-.btn-primary.active.focus {
-    background-color: #2184be;
-    border-color: #2184be;
+.btn-primary.active, .btn-primary.active.focus, .btn-primary.active:hover {
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
 .btn:focus,
@@ -43,32 +43,37 @@ label {
 
 .wizard > .content {
     overflow-y: auto;
+    background-color:white;
+    margin:0;
 }
 
 .wizard > .content > .body {
     width: 100%;
     height: 100%;
+    padding:0px;
 }
 
 .wizard > .steps .number {
     font-size: inherit;
-}
-
-.btn-primary.active {
-    background-color: #2184be;
-    border-color: #2184be;
+    display:none;
 }
 
 .btn-primary {
-    background-color: inherit;
-    border-color: #2184be;
-    color: #2184be;
+    background-color: white;
+    border-color: #007bff;
+    color: #007bff;
     margin-left: 0.2em !important;
     margin-right: 0.2em;
     border-top-right-radius: 4px !important;
     border-bottom-right-radius: 4px !important;
     border-top-left-radius: 4px !important;
     border-bottom-left-radius: 4px !important;
+}
+
+.btn-primary:hover, .btn-primary.active, .btn-primary.focus {
+    border-color: #007bff;
+    color: white;
+    background-color:#007bff;
 }
 
 #bootstrap-duallistbox-nonselected-list_ option, #bootstrap-duallistbox-selected-list_ option {
@@ -132,5 +137,97 @@ input[type="checkbox"]:checked + label span.checkbox::after {
 } */
 
 .wizard > .steps > ul > li {
-    width:33%;
+    width:33.333%;
+}
+.wizard > .steps a, .wizard > .steps a:hover, .wizard > .steps a:active {
+    display: block;
+    width: auto;
+    margin: 0 0em 0em;
+    padding: 1em 1em;
+    text-decoration: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.wizard > .steps {
+    font-size:14px;
+}
+
+.step-number{
+    font-weight:600;
+}
+
+.wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+    background: white;
+    cursor: default;
+    border: solid 1px rgb(223,226,229);
+   color: #24292e;
+}
+
+.wizard > .steps .disabled a, .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active {
+    background: #fafbfc;
+    cursor: default;
+    border: solid 1px rgb(223,226,229);
+   color: rgb(198,203,209);
+}
+
+.wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+    background: white;
+    cursor: default;
+    border: solid 1px rgb(223,226,229);
+   color: #24292e;
+}
+
+.wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
+    background: #fafbfc;
+    cursor: default;
+    border: solid 1px rgb(223,226,229);
+   color: #586069;
+}
+
+.step-icon {
+    margin-right:5px;
+}
+
+.wizard > .steps .current a .step-icon, .wizard > .steps .current a .step-icon:hover, .wizard > .steps .current a .step-icon:active {
+    color:#007bff;
+}
+
+.wizard > .steps .done a .step-icon, .wizard > .steps .done a .step-icon:hover, .wizard > .steps .done a .step-icon:active {
+    color:green;
+}
+
+
+.wizard > .actions {
+    position: fixed;
+    display: block;
+    text-align: center;
+    bottom:0px;
+    left:0px;
+    /* width: 89%; */
+    z-index:999999999;
+    background-color: #fafbfc;
+    border-top: solid 1px rgb(223,226,229);
+    padding: 10px 0px;
+    width: 100vw;
+    /* margin-left:-70px; */
+    margin-left: calc(-50vw + 50%); 
+    /* border: 2px solid green; */
+}
+
+.actions a[href="#previous"] {
+    display:none;
+}
+
+.wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active {
+    border-color: #007bff;
+    color: white;
+    background-color:#007bff;
+    padding:0.35em 125px;;
+
 }
