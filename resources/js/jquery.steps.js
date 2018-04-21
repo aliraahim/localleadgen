@@ -2016,7 +2016,7 @@ var defaults = $.fn.steps.defaults = {
          * @default "Next"
          * @for defaults
          **/
-        next: "Next step",
+        next: "Continue to next step",
 
         /**
          * Label for the previous button.

@@ -34,6 +34,7 @@ include 'connect.php';
         <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-duallistbox.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.css">
         <link href="resources/css/jquery.steps.css" rel="stylesheet">
+        <link href="resources/css/multi.min.css" rel="stylesheet">
         <link href="resources/css/custom.css?version=2" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
         <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> -->
@@ -72,20 +73,20 @@ include 'connect.php';
                 <h1><span class ="step-icon"><i class="fas fa-map-marker-alt"></i></span><span class ="step-number">Step 1</span><br/><span class ="step-title">Select Area</span></h1>
                 <div>
                     <div>
-                        <p class="lead">Select your target area by placing a marker on the map and selecting the search radius below the map.</p>
+                        <p class="lead" style="margin-bottom:30px">Select your target area by choosing a search radius and placing/dragging the marker on the map.</p>
                     </div>
-                    <div style="height:70%; text-align:center;">
-                        <input id="pac-input" class="controls" type="text" placeholder="Enter the location that you're interested in">
-                        <div id="map"></div>
-                    </div>
-                    <div class="row">
-                        <div class="xs-12" style="text-align:center; margin-top:1em; margin-bottom:1em;"> Search radius&nbsp;&nbsp;&nbsp;
+                    <div class="xs-12" style="text-align:center; margin-top:1em; margin-bottom:1em;"><span class ="hidden-xs"> Search radius&nbsp;&nbsp;&nbsp;</span>
                             <input id="radius" data-slider-id='ex1Slider' type="text" data-slider-min="0.1" data-slider-max="5" data-slider-step="0.1" data-slider-value="2" /> <span>&nbsp;&nbsp;&nbsp;</span><span id="q_opt" class="btn-group" data-toggle="buttons" style="margin-top:0.6em;">
             <label class="btn btn-primary active" id="d_op_0">
                 <input id="q_op_0" name="op" type="radio" value="kilometers" checked />Kilometers</label>
             <label class="btn btn-primary" id="d_op_1">
                 <input id="q_op_1" name="op" type="radio" value="miles" />Miles</label>
         </span> </div>
+                    <div style="height:70%; text-align:center;">
+                        <input id="pac-input" class="controls" type="text" placeholder="You can also type in a location">
+                        <div id="map"></div>
+                    </div>
+                    <div class="row">
                     </div>
                 </div>
                 <h1><span class ="step-icon"><i class="fas fa-building"></i></span><span class ="step-number">Step 2</span><br/><span class ="step-title">Select Types</span></h1>
@@ -99,10 +100,16 @@ include 'connect.php';
                                 </select>
                                 <br> </div>
                         </div>
+                        <div class="m-3 m-sm-5"></div>
                     </div>
                 </div>
                 <h1><span class ="step-icon"><i class="fab fa-wpforms"></i></span><span class ="step-number">Step 3</span><br/><span class ="step-title">Enter Details</span></h1>
 <div class="container">
+    <div class ="row">
+        <div class ="col-sm-12">
+        <p class="lead">Enter your details so that we can email you the results.</p>
+</div>
+    </div>
     <div class="row">
         <div class="col-sm-6"><form id = "userData">
   <div class="form-group">
@@ -122,13 +129,13 @@ include 'connect.php';
       <label for="want-emails"><span class="checkbox">I want emails too.</span></label>
 </div>
 </form></div>
-        <div class="col-sm-6"></div>
+        <div class="col-sm-6 hidden-xs"><img class ="img-responsive results" src ="resources/images/results_delivered.png"/></div>
     </div>
 </div>
                 </div>
                 
                 </div>
-                <div><p class ="text-center">Built by Raahim.</p></div>
+                <!-- <div><p class ="text-center">Built by Raahim.</p></div> -->
                 
                 
             </div>
@@ -152,22 +159,31 @@ include 'connect.php';
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="resources/js/ie10-viewport-bug-workaround.js"></script>
         <script src="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.js"></script>
+        <script src="resources/js/multi.min.js"></script>
         <script src="resources/js/map.js"></script>
         <script src="resources/js/main.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $GLOBALS['google_key'] ?>&libraries=places&callback=initMap" async defer></script>
 
         <script src="resources/js/jquery.bootstrap-duallistbox.min.js"></script>
         <script>
-            $("#category-selector").bootstrapDualListbox({
-                infoText: 'Showing all {0} place types'
-                , infoTextEmpty: 'No place types in the list'
-                , selectedListLabel: ''
-                , nonSelectedListLabel: ''
-                , selectorMinimalHeight: 300
-                    // see next for specifications
+            $("#category-selector").multi({
+                enable_search: true
+                , search_placeholder: 'Search for category'
+
             });
-            $( ".moveall" ).prepend( "Add all" );
-            $( ".removeall" ).append( "Remove all" );
+            
+
+
+            // $("#category-selector").bootstrapDualListbox({
+            //     infoText: 'Showing all {0} place types'
+            //     , infoTextEmpty: 'No place types in the list'
+            //     , selectedListLabel: ''
+            //     , nonSelectedListLabel: ''
+            //     , selectorMinimalHeight: 300
+            //         // see next for specifications
+            // });
+            // $( ".moveall" ).prepend( "Add all" );
+            // $( ".removeall" ).append( "Remove all" );
         </script>
     </body>
 

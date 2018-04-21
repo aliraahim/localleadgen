@@ -1,3 +1,6 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
 .btn:focus {
     outline: none;
     background-color: inherit;
@@ -24,10 +27,7 @@
     -webkit-box-shadow: none !important;
 }
 
-.btn-primary.active, .btn-primary.active.focus, .btn-primary.active:hover {
-    background-color: #007bff;
-    border-color: #007bff;
-}
+
 
 .btn:focus,
 .btn:active:focus,
@@ -58,10 +58,16 @@ label {
     display:none;
 }
 
+.btn-primary.active, .btn-primary.active.focus, .btn-primary.active:hover {
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
 .btn-primary {
     background-color: white;
-    border-color: #007bff;
-    color: #007bff;
+    /* border-color: #007bff; */
+    border-color: #337ab7;
+    color: #337ab7;
     margin-left: 0.2em !important;
     margin-right: 0.2em;
     border-top-right-radius: 4px !important;
@@ -71,9 +77,9 @@ label {
 }
 
 .btn-primary:hover, .btn-primary.active, .btn-primary.focus {
-    border-color: #007bff;
+    border-color: #337ab7;
     color: white;
-    background-color:#007bff;
+    background-color:#337ab7;
 }
 
 #bootstrap-duallistbox-nonselected-list_ option, #bootstrap-duallistbox-selected-list_ option {
@@ -228,6 +234,58 @@ input[type="checkbox"]:checked + label span.checkbox::after {
     border-color: #007bff;
     color: white;
     background-color:#007bff;
-    padding:0.35em 125px;;
+    /* padding:0.35em 70px;; */
+    min-width:30vw;
+    text-align: center;
+
+}
+
+.multi-wrapper .item:hover {
+    text-decoration: none;
+}
+
+.multi-wrapper .non-selected-wrapper, .multi-wrapper .selected-wrapper {
+    height:80vw;
+}
+
+.multi-wrapper{
+    border: solid 1px rgb(223,226,229);
+}
+
+.search-input {
+    border:none !important;
+    border-bottom: 1px solid  rgb(223,226,229) !important;
+}
+
+input[type="text"], input[type="email"] {
+  background: transparent;
+  border: solid 1px rgb(223,226,229) !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+span.checkbox::before {
+    border:1px solid #007bff;
+}
+
+span.checkbox:hover::before {
+    border:2px solid #007bff;
+}
+
+.wizard > .actions > ul > li {
+    margin:0;
+}
+
+.results {
+    overflow: hidden;
+    max-width:300px;
+    margin:0 auto;
 
 }
