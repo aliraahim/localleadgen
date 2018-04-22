@@ -514,7 +514,9 @@ span.checkbox:hover::before {
     text-align:left;
   }
 
-
+.success-screen {
+    min-height: 35em;
+}
 .success-screen.hidden{
     display:none;
 }
