@@ -87,6 +87,7 @@ include 'connect.php';
                         <div id="map"></div>
                     </div>
                     <div class="row">
+                    <div class="m-3 m-sm-5"></div>
                     </div>
                 </div>
                 <h1><span class ="step-icon"><i class="fas fa-building"></i></span><span class ="step-number">Step 2</span><br/><span class ="step-title">Select Types</span></h1>
