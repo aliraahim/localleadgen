@@ -58,7 +58,7 @@ include 'connect.php';
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.css">
         <link href="resources/css/jquery.steps.css" rel="stylesheet">
         <link href="resources/css/multi.min.css" rel="stylesheet">
-        <link href="resources/css/custom.css?version=4" rel="stylesheet">
+        <link href="resources/css/custom.css?version=5" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"> -->
         <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -132,10 +132,10 @@ include 'connect.php';
                     </div>
                     <div class="xs-12" style="text-align:center; margin-top:1em; margin-bottom:1em;"><span class ="hidden-xs"> Search radius&nbsp;&nbsp;&nbsp;</span>
                             <input id="radius" data-slider-id='ex1Slider' type="text" data-slider-min="0.1" data-slider-max="5" data-slider-step="0.1" data-slider-value="2" /> <span>&nbsp;&nbsp;&nbsp;</span><span id="q_opt" class="btn-group" data-toggle="buttons" style="margin-top:0.6em;">
-            <label class="btn btn-primary active" id="d_op_0">
-                <input id="q_op_0" name="op" type="radio" value="kilometers" checked />Kilometers</label>
-            <label class="btn btn-primary" id="d_op_1">
-                <input id="q_op_1" name="op" type="radio" value="miles" />Miles</label>
+            <label class="btn btn-primary active unit-selector" id="d_op_0">
+                <input id="q_op_0" name="op" type="radio" value="kilometers" checked />kilometers</label>
+            <label class="btn btn-primary unit-selector" id="d_op_1">
+                <input id="q_op_1" name="op" type="radio" value="miles" />miles</label>
         </span> </div>
                     <div style="height:70%; text-align:center;">
                         <input id="pac-input" class="controls" type="text" placeholder="You can also type in a location">

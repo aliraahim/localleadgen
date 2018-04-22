@@ -512,3 +512,23 @@ a:hover, a:focus, a:active {
     font-size:14px;
     font-weight:300;
 }
+
+.unit-selector {
+    border: none !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    background:white !important;
+    padding:0 !important;
+    border-bottom-style: dotted !important;
+    border-bottom-width: 1px !important;
+    border-bottom-color: #919192 !important;
+    color:#919192 !important;
+    padding-bottom:0.1rem;
+    cursor:pointer;
+    
+}
+
+.unit-selector.active, .unit-selector.focus {
+    border-bottom-color: #007bff !important;
+    color:#007bff !important;
+}
