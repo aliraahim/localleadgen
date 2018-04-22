@@ -20,6 +20,7 @@ include 'connect.php';
                 height: 100%;
                 z-index: 999999;
                 background: url(resources/images/Preloader_2.gif) center no-repeat #fff;
+                background-size:65px;
             }
         </style>
         <script>
@@ -73,6 +74,15 @@ include 'connect.php';
 
     <body>
     <div class="se-pre-con"></div>
+    <!-- <div class="success-screen">
+        <div class = "container">
+            <div class = "row">
+                <div class ="col-sm-12">
+                    <img src = "resources/images/bot.svg" class = "img-responsive"/>
+        </div>
+        </div>
+        </div>
+    </div> -->
         <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -104,6 +114,15 @@ include 'connect.php';
         </div>
         
         <div class="container app">
+        <div class="success-screen hidden text-center">
+            <div class = "row">
+                <div class ="col-sm-12">
+                    <img src = "resources/images/bot.svg" class = "img-responsive"/>
+                    <p class="lead">While the bots do their work gathering your data, feel free to <a href ="#"><span class = "link">check out some of my other work.</span></a></p>
+                    <p class="sub-lead">Or if you're completely blown away by what the tool can do, feel free to <a href ="/"><span class = "link">request some more leads.</span></a></p>
+        </div>
+        </div>
+    </div>
         <div class="">
             <div id="wizard">
                 <h1><span class ="step-icon"><i class="fas fa-map-marker-alt"></i></span><span class ="step-number">Step 1</span><br/><span class ="step-title">Select Area</span></h1>
@@ -219,7 +238,7 @@ include 'connect.php';
             $( ".what-is span" ).on( "click", function() {
                 swal({
   title: "What is this, you ask?",
-  text: "This is a tool I developed that lets you source leads from targeted areas. The results include details about the business (name, address, phone number, website, Google rating, etc.) as well as emails (if the business has any on their website)! Still confused about how to use this? Well, then the tool probably isn't meant for you. :) Just kidding, shoot me an email at ali.raahim@gmail.com and I'll explain.",
+  text: "This is a tool I developed that lets you source business leads from targeted areas. The results include details about the business (name, address, phone number, website, Google rating, etc.) as well as emails (if the business has any on their website)! Still confused about how to use this? Well, then the tool probably isn't meant for you. :) Just kidding, shoot me an email at ali.raahim@gmail.com and I'll explain.",
   customClass: "what-is-alert",
   button: "Got it!",
 });

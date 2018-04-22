@@ -1,5 +1,6 @@
 $("#wizard").steps({
     onFinished: function (event, currentIndex) {
+        
         var coo = JSON.stringify(coords);
         var radius = $("#radius").slider('getValue');
         var categories = JSON.stringify($('#category-selector').val());
@@ -49,7 +50,10 @@ $("#wizard").steps({
                     , confirmButtonText: "Nice!"
                  }).then(function() {
                     // Redirect the user
-                    window.location.href = "/";
+                    // window.location.href = "/";
+                    $("#wizard").remove();
+        $(".success-screen").removeClass("hidden");
+        $(".app").addClass("full-height");
                     });
                 }
                 

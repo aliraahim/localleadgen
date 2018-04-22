@@ -446,7 +446,7 @@ span.checkbox:hover::before {
 .built-by{
     position:absolute;
     top: 50%;
-    right:2%;
+    right:0%;
 }
 .built-by span{
     float:right;
@@ -467,7 +467,7 @@ span.checkbox:hover::before {
 .what-is{
     position:absolute;
     top: 50%;
-    left:2%;
+    left:0%;
 }
 
 .logo {
@@ -487,3 +487,28 @@ span.checkbox:hover::before {
   .what-is-alert .swal2-content {
     text-align:left;
   }
+
+
+.success-screen.hidden{
+    display:none;
+}
+
+.success-screen img {
+    margin:0 auto;
+    height:15em;
+    padding-top:3em;
+    padding-bottom:1em;
+}
+
+.full-height{
+    height:100%;
+}
+
+a:hover, a:focus, a:active {
+    text-decoration:none;
+}
+
+.sub-lead {
+    font-size:14px;
+    font-weight:300;
+}
