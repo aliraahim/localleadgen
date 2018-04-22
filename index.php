@@ -58,7 +58,7 @@ include 'connect.php';
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.css">
         <link href="resources/css/jquery.steps.css" rel="stylesheet">
         <link href="resources/css/multi.min.css" rel="stylesheet">
-        <link href="resources/css/custom.css?version=5" rel="stylesheet">
+        <link href="resources/css/custom.css?version=6" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"> -->
         <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
