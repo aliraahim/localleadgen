@@ -184,8 +184,10 @@ include 'connect.php';
     <input type="checkbox" id="want-emails">
     <label for="want-emails">I want emails too.</label>
 </div>
+
 </form></div>
-        <div class="col-sm-6 hidden-xs"><img class ="img-responsive results" src ="resources/images/results_delivered.png"/></div>
+<div class="col-sm-6 results"><p style="font-weight:200">Include emails in the results?</p><img class ="img-responsive gray" src ="resources/images/email.svg"/></div>
+        
     </div>
 </div>
                 </div>
@@ -224,6 +226,7 @@ include 'connect.php';
         
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
         <script>
+            
             $("#category-selector").multi({
                 enable_search: true
                 , search_placeholder: 'Search for category'
@@ -242,6 +245,16 @@ include 'connect.php';
   customClass: "what-is-alert",
   button: "Got it!",
 });
+});
+$( ".results img" ).on( "click", function() {
+    if ($( ".results img" ).hasClass("gray")){
+        $('#want-emails').prop('checked', true);
+        $( ".results img" ).removeClass("gray");
+    } else {
+        $('#want-emails').prop('checked', false);
+        $( ".results img" ).addClass("gray");
+    }
+    
 });
         </script>
     </body>

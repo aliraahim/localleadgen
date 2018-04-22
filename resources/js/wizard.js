@@ -1,6 +1,6 @@
 $("#wizard").steps({
     onFinished: function (event, currentIndex) {
-        
+        alert($('#want-emails').prop('checked'));
         var coo = JSON.stringify(coords);
         var radius = $("#radius").slider('getValue');
         var categories = JSON.stringify($('#category-selector').val());
@@ -84,10 +84,10 @@ $("#wizard").steps({
                 , });
                 return;
             }
-            $(".content").css("min-height","22em");
+            // $(".content").css("min-height","22em");
         }
         if (newIndex != 2) {
-            $(".content").css("min-height","35em");
+            // $(".content").css("min-height","35em");
         }
         return true;
     }
