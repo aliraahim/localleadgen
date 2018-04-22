@@ -1,6 +1,5 @@
 $("#wizard").steps({
     onFinished: function (event, currentIndex) {
-        alert($('#want-emails').prop('checked'));
         var coo = JSON.stringify(coords);
         var radius = $("#radius").slider('getValue');
         var categories = JSON.stringify($('#category-selector').val());

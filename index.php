@@ -119,7 +119,7 @@ include 'connect.php';
                 <div class ="col-sm-12">
                     <img src = "resources/images/bot.svg" class = "img-responsive"/>
                     <p class="lead">While the bots do their work gathering your data, feel free to <a href ="#"><span class = "link">check out some of my other work.</span></a></p>
-                    <p class="sub-lead">Or if you're completely blown away by what the tool can do, feel free to <a href ="/"><span class = "link">request some more leads.</span></a></p>
+                    <p class="sub-lead">(Or if you're completely blown away by what the tool can do, feel free to <a href ="/"><span class = "link">request some more leads.</span></a>)</p>
         </div>
         </div>
     </div>
@@ -210,8 +210,8 @@ include 'connect.php';
             window.jQuery || document.write('<script src="resources/js/vendor/jquery.min.js"><\/script>')
         </script> -->
         <script src="resources/js/bootstrap.min.js"></script>
-        <script src="resources/js/jquery.steps.js?version=2"></script>
-        <script src="resources/js/wizard.js?version=4"></script>
+        <script src="resources/js/jquery.steps.js?version=4"></script>
+        <script src="resources/js/wizard.js?version=6"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.3.0/bootstrap-slider.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script> -->
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
