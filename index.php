@@ -6,6 +6,28 @@ include 'connect.php';
     <html lang="en">
 
     <head>
+        <style>
+                    /* Paste this css to your style sheet file or under head tag */
+            /* This only works with JavaScript, 
+            if it's not present, don't show loader */
+            .no-js #loader { display: none;  }
+            .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+            .se-pre-con {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 999999;
+                background: url(resources/images/Preloader_2.gif) center no-repeat #fff;
+            }
+        </style>
+        <script>
+                    //paste this code under the head tag or in a separate js file.
+            // Wait for window load
+
+        </script>
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,8 +35,8 @@ include 'connect.php';
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#2b5797">
@@ -27,18 +49,17 @@ include 'connect.php';
         <link href="resources/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.3.0/css/bootstrap-slider.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css"> -->
         <link href="resources/css/jquery.steps-main.css" rel="stylesheet">
         <link href="resources/css/jquery.steps-normalize.css" rel="stylesheet">
-        <link href="resources/css/main.css?version=2" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-duallistbox.css">
+        <!-- <link href="resources/css/main.css?version=2" rel="stylesheet"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-duallistbox.css"> -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.css">
         <link href="resources/css/jquery.steps.css" rel="stylesheet">
         <link href="resources/css/multi.min.css" rel="stylesheet">
         <link href="resources/css/custom.css?version=2" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> -->
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"> -->
+        <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="resources/js/ie-emulation-modes-warning.js"></script>
@@ -51,6 +72,7 @@ include 'connect.php';
     </head>
 
     <body>
+    <div class="se-pre-con"></div>
         <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -63,11 +85,25 @@ include 'connect.php';
                 </div>
             </div>
         </nav> -->
-        <!-- <div class="container">
-            <div class="starter-template">
-                <h1>Local Leads Generator</h1> </div>
-        </div> -->
-        <div class="container">
+        <div class="container text-center">
+        <div class="row top-row">
+        <div class="col-xs-4 what-is">
+        <span class ="link">What is this?</span>
+       
+        </div>
+        <div class="col-xs-4 logo">
+        <img class = "img-fluid" src = "resources/images/logo.png"/>
+        
+        </div>
+        <div class="col-xs-4 built-by">
+        <span>Built by Raahim</span>
+        </div>
+    </div>
+                
+                
+        </div>
+        
+        <div class="container app">
         <div class="">
             <div id="wizard">
                 <h1><span class ="step-icon"><i class="fas fa-map-marker-alt"></i></span><span class ="step-number">Step 1</span><br/><span class ="step-title">Select Area</span></h1>
@@ -125,9 +161,9 @@ include 'connect.php';
     <label for="company">Company</label>
     <input type="text" class="form-control" id="company" placeholder="">
   </div>
-  <div class="stylish-checkbox">
-      <input type="checkbox" id="want-emails">
-      <label for="want-emails"><span class="checkbox">I want emails too.</span></label>
+  <div class="new-stylish-checkbox">
+    <input type="checkbox" id="want-emails">
+    <label for="want-emails">I want emails too.</label>
 </div>
 </form></div>
         <div class="col-sm-6 hidden-xs"><img class ="img-responsive results" src ="resources/images/results_delivered.png"/></div>
@@ -149,42 +185,45 @@ include 'connect.php';
         <!-- Placed at the end of the document so the pages load faster -->
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
+        <!-- <script>
             window.jQuery || document.write('<script src="resources/js/vendor/jquery.min.js"><\/script>')
-        </script>
+        </script> -->
         <script src="resources/js/bootstrap.min.js"></script>
         <script src="resources/js/jquery.steps.js"></script>
         <script src="resources/js/wizard.js?version=<?php echo uniqid(); ?>"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.3.0/bootstrap-slider.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script> -->
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="resources/js/ie10-viewport-bug-workaround.js"></script>
         <script src="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.js"></script>
         <script src="resources/js/multi.min.js"></script>
         <script src="resources/js/map.js"></script>
-        <script src="resources/js/main.js"></script>
+        <!-- <script src="resources/js/main.js"></script> -->
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $GLOBALS['google_key'] ?>&libraries=places&callback=initMap" async defer></script>
 
         <script src="resources/js/jquery.bootstrap-duallistbox.min.js"></script>
+        
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
         <script>
             $("#category-selector").multi({
                 enable_search: true
                 , search_placeholder: 'Search for category'
 
             });
-            
 
+            $(window).load(function() {
+                // Animate loader off screen
+                $(".se-pre-con").fadeOut("slow");;
+            });
 
-            // $("#category-selector").bootstrapDualListbox({
-            //     infoText: 'Showing all {0} place types'
-            //     , infoTextEmpty: 'No place types in the list'
-            //     , selectedListLabel: ''
-            //     , nonSelectedListLabel: ''
-            //     , selectorMinimalHeight: 300
-            //         // see next for specifications
-            // });
-            // $( ".moveall" ).prepend( "Add all" );
-            // $( ".removeall" ).append( "Remove all" );
+            $( ".what-is span" ).on( "click", function() {
+                swal({
+  title: "What is this, you ask?",
+  text: "This is a tool I developed that lets you source leads from targeted areas. The results include details about the business (name, address, phone number, website, Google rating, etc.) as well as emails (if the business has any on their website)! Still confused about how to use this? Well, then the tool probably isn't meant for you. :) Just kidding, shoot me an email at ali.raahim@gmail.com and I'll explain.",
+  customClass: "what-is-alert",
+  button: "Got it!",
+});
+});
         </script>
     </body>
 

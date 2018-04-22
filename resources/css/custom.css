@@ -1,3 +1,77 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgb(239,239,233);
+}
+
+body {
+    padding-top: 30px !important;
+}
+
+.starter-template {
+    padding: 40px 0px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 300px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+.pac-container {
+    font-family: Roboto;
+}
+
+#type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -87,9 +161,9 @@ label {
 }
 
 
-.stylish-checkbox {
+/* .stylish-checkbox {
   padding-left: 35px;
-}
+} */
 input[type="checkbox"]{
   display: none !important;
 }
@@ -212,7 +286,7 @@ input[type="checkbox"]:checked + label span.checkbox::after {
     bottom:0px;
     left:0px;
     /* width: 89%; */
-    z-index:999999999;
+    z-index:999;
     background-color: #fafbfc;
     border-top: solid 1px rgb(223,226,229);
     padding: 10px 0px;
@@ -294,3 +368,122 @@ span.checkbox:hover::before {
     margin:0;
     margin-bottom:5em;
 }
+
+.new-stylish-checkbox input[type="checkbox"] {
+    opacity: 0;
+}
+
+.new-stylish-checkbox label {
+    position: relative;
+    display: inline-block;
+    
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+    padding-left: 22px;
+}
+
+.new-stylish-checkbox label::before,
+.new-stylish-checkbox label::after {
+    position: absolute;
+    content: "";
+    
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.new-stylish-checkbox label::before{
+    height: 16px;
+    width: 16px;
+    
+    border: 1px solid;
+    left: 0px;
+    
+    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+    top: 3px;
+}
+
+/*Checkmark of the fake checkbox*/
+.new-stylish-checkbox label::after {
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    
+    transform: rotate(-45deg);
+    
+    left: 4px;
+    top: 7px;
+}
+
+/*Hide the checkmark by default*/
+.new-stylish-checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.new-stylish-checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.new-stylish-checkbox input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+.app {
+    padding-top:1em;
+    background:white;
+    border: solid 1px rgb(223,226,229)
+}
+
+.logo img{
+    width:50px;
+    padding-bottom:10px;
+}
+
+.built-by{
+    position:absolute;
+    top: 50%;
+    right:2%;
+}
+.built-by span{
+    float:right;
+    font-size:12px;
+    color:#586069;
+    font-weight:300;
+}
+
+.top-row{
+    position:relative;
+}
+
+.what-is span{
+    float:left;
+    font-size:12px;
+}
+
+.what-is{
+    position:absolute;
+    top: 50%;
+    left:2%;
+}
+
+.logo {
+    margin: 0 auto;
+    float: inherit;
+}
+
+.link, .link:hover{
+    text-decoration:none;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    color:#F17105;
+    padding-bottom:0.1rem;
+    cursor:pointer;
+  }
+
+  .what-is-alert .swal2-content {
+    text-align:left;
+  }
