@@ -58,7 +58,7 @@ include 'connect.php';
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/5.3.5/sweetalert2.min.css">
         <link href="resources/css/jquery.steps.css" rel="stylesheet">
         <link href="resources/css/multi.min.css" rel="stylesheet">
-        <link href="resources/css/custom.css?version=3" rel="stylesheet">
+        <link href="resources/css/custom.css?version=4" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"> -->
         <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -208,7 +208,7 @@ include 'connect.php';
             window.jQuery || document.write('<script src="resources/js/vendor/jquery.min.js"><\/script>')
         </script> -->
         <script src="resources/js/bootstrap.min.js"></script>
-        <script src="resources/js/jquery.steps.js"></script>
+        <script src="resources/js/jquery.steps.js?version=2"></script>
         <script src="resources/js/wizard.js?version=4"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.3.0/bootstrap-slider.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script> -->

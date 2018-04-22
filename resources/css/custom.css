@@ -286,7 +286,7 @@ input[type="checkbox"]:checked + label span.checkbox::after {
     bottom:0px;
     left:0px;
     /* width: 89%; */
-    z-index:999;
+    z-index:1075;
     background-color: #fafbfc;
     border-top: solid 1px rgb(223,226,229);
     padding: 10px 0px;
