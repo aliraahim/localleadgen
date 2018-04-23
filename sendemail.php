@@ -1,5 +1,9 @@
 
 <?php
+ob_start();
+include("template.html");
+$r = ob_get_clean();
+
 // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
 // If you are using Composer (recommended)
@@ -11,8 +15,8 @@ function SendEmail ($user){
     $from = new SendGrid\Email("HyperLocal Lead Gen", "delivery@hyperlocalleadgen.com");
     $subject = "Your leads are here!";
     $to = new SendGrid\Email($user['name'], $user['email']);
-    $content = new SendGrid\Content("text/html", "Your results are attached!");
-    
+    // $content = new SendGrid\Content("text/html", "Your results are attached!");
+    $content = new SendGrid\Content("text/html",$r);
     $name = $user['request_id'].'.csv';
     $file = 'output/'.$user['request_id'].'.csv';
     $file_encoded = base64_encode(file_get_contents($file));
