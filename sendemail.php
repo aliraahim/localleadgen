@@ -1,8 +1,8 @@
 
 <?php
-ob_start();
-include("template.html");
-$r = ob_get_clean();
+// ob_start();
+// include("template.html");
+// $r = ob_get_clean();
 
 // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
@@ -16,6 +16,7 @@ function SendEmail ($user){
     $subject = "Your leads are here!";
     $to = new SendGrid\Email($user['name'], $user['email']);
     // $content = new SendGrid\Content("text/html", "Your results are attached!");
+    $r=file_get_contents('template.html');
     $content = new SendGrid\Content("text/html",$r);
     $name = $user['request_id'].'.csv';
     $file = 'output/'.$user['request_id'].'.csv';
